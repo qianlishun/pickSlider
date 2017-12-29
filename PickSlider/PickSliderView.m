@@ -66,6 +66,8 @@
 
 @property (nonatomic,strong) NSMutableArray *bgImgList;
 
+@property (nonatomic,assign) NSInteger playIndex;
+
 @end
 
 
@@ -79,6 +81,7 @@ static NSString *const reusedIdentifier = @"cell";
         
         self.backgroundColor = [UIColor clearColor];
         self.selectedItemIndex = 0;
+        self.playIndex = 100;
         self.dataSource = [NSMutableArray array];
         //Create flowlayout
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -295,7 +298,13 @@ static NSString *const reusedIdentifier = @"cell";
 
 - (void)scrollToIndex:(NSInteger)index{
     if (index>=0 && index<self.dataSource.count-3) {
-        [self.pickerView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index+6 inSection:0] atScrollPosition:0 animated:YES];
+        _autoScrollEnd = YES;
+        NSInteger n = index;
+        if (self.playIndex<index) { // 如果是滚动条向右滑(对应用户下一张操作),则滚动对应关系需要+6;
+            index = index+6;
+        }
+        self.playIndex = n;
+        [self.pickerView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:0 animated:YES];
         [self scrollViewDidEndDecelerating:self.pickerView];
     }
 }
