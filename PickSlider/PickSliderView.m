@@ -7,11 +7,12 @@
 
 #define kCellWidth self.frame.size.width/7
 
-#define cellDefaultColor [UIColor darkGrayColor]
+#define cellDefaultColor [UIColor whiteColor]
 #define cellSelectColor [UIColor greenColor]
 
 #import "PickSliderView.h"
 #import "UIImage+Extension.h"
+#import "UIView+Extension.h"
 
 @interface HorizontalScrollCell : UICollectionViewCell
 
@@ -126,18 +127,21 @@ static NSString *const reusedIdentifier = @"cell";
     NSInteger currentIndexInArray = indexPath.row;
     
     HorizontalScrollCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reusedIdentifier forIndexPath:indexPath];
+    cell.titleLabel.text = [NSString stringWithFormat:@"%zd",indexPath.row];
 
     cell.imageView.image = self.dataSource[currentIndexInArray%4];
-    
-    if(currentIndexInArray == self.index) {
-        cell.imageView.backgroundColor = cellSelectColor;
-        [cell.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
-        cell.titleLabel.textColor = cellSelectColor;
-    }else {
-        cell.imageView.backgroundColor = cellDefaultColor;
-        [cell.titleLabel setFont:[UIFont systemFontOfSize:14]];
-        cell.titleLabel.textColor = [UIColor whiteColor];
-    }
+    [cell.imageView setBoundsWith:[UIColor clearColor]];
+
+//    if(currentIndexInArray == self.index) {
+//        [cell.imageView setBoundsWith:[UIColor greenColor]];
+//        cell.imageView.backgroundColor = cellSelectColor;
+//        [cell.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+//        cell.titleLabel.textColor = cellSelectColor;
+//    }else {
+//        cell.imageView.backgroundColor = cellDefaultColor;
+//        [cell.titleLabel setFont:[UIFont systemFontOfSize:14]];
+//        cell.titleLabel.textColor = [UIColor whiteColor];
+//    }
  
     
     return cell;
@@ -152,6 +156,17 @@ static NSString *const reusedIdentifier = @"cell";
     if(scrollView == self.pickerView) {
         // 如果出现误差，再加0.5
         NSInteger centerIndex = (scrollView.contentOffset.x+self.pickerView.center.x)/(kCellWidth);
+        
+        HorizontalScrollCell *perviousCenterCell = (HorizontalScrollCell *)[self.pickerView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.index inSection:0]];
+
+        if (perviousCenterCell) {
+            [perviousCenterCell.imageView setBoundsWith:[UIColor clearColor]];
+            perviousCenterCell.titleLabel.textColor = cellDefaultColor;
+        }
+        
+        HorizontalScrollCell *cell = (HorizontalScrollCell *)[self.pickerView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:centerIndex inSection:0]];
+        [cell.imageView setBoundsWith:cellSelectColor];
+        cell.titleLabel.textColor = cellSelectColor;
         
         if (centerIndex != self.index) {
             self.index = centerIndex;
@@ -180,7 +195,7 @@ static NSString *const reusedIdentifier = @"cell";
 
         self.pickerView.contentOffset = CGPointMake(x*kCellWidth, 0);
         
-        //        [self itemIndexCallBack];
+
     }
 }
 

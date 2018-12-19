@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E6720C521CA4EFC003B5CED /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6720C421CA4EFB003B5CED /* UIView+Extension.m */; };
 		6EC2C5871E7F97B5005E6392 /* PickSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2C5861E7F97B5005E6392 /* PickSliderView.m */; };
 		6ED3CB541DFA5D9E00CD2BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3CB531DFA5D9E00CD2BA4 /* main.m */; };
 		6ED3CB571DFA5D9E00CD2BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3CB561DFA5D9E00CD2BA4 /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E6720C321CA4EFB003B5CED /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		6E6720C421CA4EFB003B5CED /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		6EC2C5851E7F97B5005E6392 /* PickSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickSliderView.h; sourceTree = "<group>"; };
 		6EC2C5861E7F97B5005E6392 /* PickSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickSliderView.m; sourceTree = "<group>"; };
 		6ED3CB4F1DFA5D9E00CD2BA4 /* PickSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +75,8 @@
 			children = (
 				6EF3E8852133B558003B23AC /* UIImage+Extension.h */,
 				6EF3E8862133B558003B23AC /* UIImage+Extension.m */,
+				6E6720C321CA4EFB003B5CED /* UIView+Extension.h */,
+				6E6720C421CA4EFB003B5CED /* UIView+Extension.m */,
 				6EF3E8902133B679003B23AC /* image */,
 				6EC2C5851E7F97B5005E6392 /* PickSliderView.h */,
 				6EC2C5861E7F97B5005E6392 /* PickSliderView.m */,
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6720C521CA4EFC003B5CED /* UIView+Extension.m in Sources */,
 				6EF3E8872133B558003B23AC /* UIImage+Extension.m in Sources */,
 				6EC2C5871E7F97B5005E6392 /* PickSliderView.m in Sources */,
 				6ED3CB5A1DFA5D9E00CD2BA4 /* ViewController.m in Sources */,
