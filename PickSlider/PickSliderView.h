@@ -11,13 +11,9 @@
 
 @property (nonatomic,assign) NSInteger selectedItemIndex;
 
-@property (nonatomic,assign) NSInteger count;
-
 @property (nonatomic,copy) void(^didSelectBlock)(NSInteger index);
 
 @property (nonatomic,assign) CGFloat contentOffsetX;
 
-
-- (void)scrollToIndex:(NSInteger)index;
-- (void)scrollToEnd:(NSInteger)index;
+- (void)setImageList:(NSArray*)imageList;
 @end

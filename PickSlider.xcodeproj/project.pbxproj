@@ -13,6 +13,11 @@
 		6ED3CB5A1DFA5D9E00CD2BA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3CB591DFA5D9E00CD2BA4 /* ViewController.m */; };
 		6ED3CB5D1DFA5D9E00CD2BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED3CB5B1DFA5D9E00CD2BA4 /* Main.storyboard */; };
 		6ED3CB621DFA5D9E00CD2BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED3CB601DFA5D9E00CD2BA4 /* LaunchScreen.storyboard */; };
+		6EF3E8872133B558003B23AC /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF3E8862133B558003B23AC /* UIImage+Extension.m */; };
+		6EF3E88C2133B675003B23AC /* IMG_0004.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E8882133B674003B23AC /* IMG_0004.JPG */; };
+		6EF3E88D2133B675003B23AC /* IMG_0003.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E8892133B674003B23AC /* IMG_0003.JPG */; };
+		6EF3E88E2133B675003B23AC /* IMG_0001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E88A2133B675003B23AC /* IMG_0001.JPG */; };
+		6EF3E88F2133B675003B23AC /* IMG_0002.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E88B2133B675003B23AC /* IMG_0002.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,12 @@
 		6ED3CB5C1DFA5D9E00CD2BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6ED3CB611DFA5D9E00CD2BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ED3CB631DFA5D9E00CD2BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EF3E8852133B558003B23AC /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		6EF3E8862133B558003B23AC /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		6EF3E8882133B674003B23AC /* IMG_0004.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0004.JPG; sourceTree = "<group>"; };
+		6EF3E8892133B674003B23AC /* IMG_0003.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0003.JPG; sourceTree = "<group>"; };
+		6EF3E88A2133B675003B23AC /* IMG_0001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0001.JPG; sourceTree = "<group>"; };
+		6EF3E88B2133B675003B23AC /* IMG_0002.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0002.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,9 @@
 		6ED3CB511DFA5D9E00CD2BA4 /* PickSlider */ = {
 			isa = PBXGroup;
 			children = (
+				6EF3E8852133B558003B23AC /* UIImage+Extension.h */,
+				6EF3E8862133B558003B23AC /* UIImage+Extension.m */,
+				6EF3E8902133B679003B23AC /* image */,
 				6EC2C5851E7F97B5005E6392 /* PickSliderView.h */,
 				6EC2C5861E7F97B5005E6392 /* PickSliderView.m */,
 				6ED3CB551DFA5D9E00CD2BA4 /* AppDelegate.h */,
@@ -79,6 +93,17 @@
 				6ED3CB531DFA5D9E00CD2BA4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EF3E8902133B679003B23AC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				6EF3E88A2133B675003B23AC /* IMG_0001.JPG */,
+				6EF3E88B2133B675003B23AC /* IMG_0002.JPG */,
+				6EF3E8892133B674003B23AC /* IMG_0003.JPG */,
+				6EF3E8882133B674003B23AC /* IMG_0004.JPG */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,7 +137,7 @@
 				TargetAttributes = {
 					6ED3CB4E1DFA5D9E00CD2BA4 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 62Z6NU26G9;
+						DevelopmentTeam = 7C448R8D4P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,7 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF3E88C2133B675003B23AC /* IMG_0004.JPG in Resources */,
 				6ED3CB621DFA5D9E00CD2BA4 /* LaunchScreen.storyboard in Resources */,
+				6EF3E88D2133B675003B23AC /* IMG_0003.JPG in Resources */,
+				6EF3E88F2133B675003B23AC /* IMG_0002.JPG in Resources */,
+				6EF3E88E2133B675003B23AC /* IMG_0001.JPG in Resources */,
 				6ED3CB5D1DFA5D9E00CD2BA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF3E8872133B558003B23AC /* UIImage+Extension.m in Sources */,
 				6EC2C5871E7F97B5005E6392 /* PickSliderView.m in Sources */,
 				6ED3CB5A1DFA5D9E00CD2BA4 /* ViewController.m in Sources */,
 				6ED3CB571DFA5D9E00CD2BA4 /* AppDelegate.m in Sources */,
@@ -275,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62Z6NU26G9;
+				DEVELOPMENT_TEAM = 7C448R8D4P;
 				INFOPLIST_FILE = PickSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62Z6NU26G9;
+				DEVELOPMENT_TEAM = 7C448R8D4P;
 				INFOPLIST_FILE = PickSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

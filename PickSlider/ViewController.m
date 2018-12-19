@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "PickSliderView.h"
+#import "UIImage+Extension.h"
+
 
 @interface ViewController ()
 
@@ -37,9 +39,15 @@
         int currenIndex = (int)index;
         _cineLoopIndex = currenIndex;
     };
+    CGSize size = CGSizeMake(60, 40);
+    UIImage *image1 = [[UIImage imageNamed:@"IMG_0001.JPG"]scaleToSize:size];
+    UIImage *image2 = [[UIImage imageNamed:@"IMG_0002.JPG"]scaleToSize:size];
+    UIImage *image3 = [[UIImage imageNamed:@"IMG_0003.JPG"]scaleToSize:size];
+    UIImage *image4 = [[UIImage imageNamed:@"IMG_0004.JPG"]scaleToSize:size];
+
+    NSArray *imageList = @[image1,image2,image3,image4];
     
-    _pickSliderView.count = 20;
-    
+    [self.pickSliderView setImageList:imageList];
 }
 
 @end
