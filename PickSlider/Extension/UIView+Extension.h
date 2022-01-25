@@ -19,4 +19,8 @@
 - (UIView *)findKeyboard;
 
 - (void)setBoundsWith:(UIColor *)color;
+
+- (CATextLayer*)createTextLayerWithString:(NSString*)string Frame:(CGRect)frame fontsize:(float)fontsize;
+- (CATextLayer*)createTextLayerWithString:(NSString*)string Frame:(CGRect)frame font:(UIFont*)font color:(UIColor*)color;
+
 @end

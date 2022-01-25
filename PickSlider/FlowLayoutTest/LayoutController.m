@@ -1,0 +1,93 @@
+//
+//  LayoutController.m
+//  PageTest
+//
+//  Created by xiao can on 2019/6/12.
+//  Copyright © 2019 xiaocan. All rights reserved.
+//
+
+#import "LayoutController.h"
+#import "XCollectionViewLayout.h"
+#import "LayoutControlCell.h"
+
+@interface LayoutController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic, strong) UICollectionView  *collectView;
+@property (nonatomic) BOOL affileTransformStyle;
+
+@end
+
+@implementation LayoutController
+
+- (instancetype)initWithAffineStyle:(BOOL)affineTransform{
+    self = [super init];
+    if (self) {
+        self.affileTransformStyle = affineTransform;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    if (self.affileTransformStyle) {
+        [self setTitle:@"仿射放大"];
+    }else{
+        [self setTitle:@"线性放大"];
+    }
+    
+    XCollectionViewLayout *layout = [[XCollectionViewLayout alloc] init];
+    layout.transformStyle = self.affileTransformStyle?XCollectionViewLayout_AffineTranform:XCollectionViewLayout_LinerTransform;
+    _collectView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    _collectView.backgroundColor = [UIColor blackColor];
+    _collectView.delegate = self;
+    _collectView.dataSource = self;
+    [_collectView registerClass:[LayoutControlCell class] forCellWithReuseIdentifier:NSStringFromClass([LayoutControlCell class])];
+    [self.view addSubview:_collectView];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(CGRectGetWidth(collectionView.frame) * 0.7, CGRectGetHeight(collectionView.frame) * 0.7);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(CGRectGetHeight(collectionView.frame) * 0.4, 0, CGRectGetHeight(collectionView.frame) * 0.4, 0);
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 100;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    LayoutControlCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([LayoutControlCell class]) forIndexPath:indexPath];
+//    cell.numlabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.item];
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"IMG_000%ld.JPG",indexPath.row%4+1]];
+    cell.lImgView.image = image;
+    cell.lImgView.contentMode = UIViewContentModeScaleAspectFit;
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if ([collectionView.collectionViewLayout clickCellAtIndexPath:indexPath]) {
+        NSLog(@"click cell at section: %ld  at item: %ld",(long)indexPath.section,(long)indexPath.item);
+    }
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

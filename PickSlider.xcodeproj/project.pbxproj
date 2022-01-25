@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E239EF625838EA300118B6A /* UIShadow+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E239EEA25838EA200118B6A /* UIShadow+UIView.m */; };
+		6E239EF725838EA300118B6A /* XCWaterCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E239EEB25838EA200118B6A /* XCWaterCollectionViewLayout.m */; };
+		6E239EF825838EA300118B6A /* XCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E239EEF25838EA200118B6A /* XCollectionViewLayout.m */; };
+		6E239F052583906D00118B6A /* LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E239F012583906D00118B6A /* LayoutController.m */; };
+		6E239F072583906D00118B6A /* LayoutControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E239F032583906D00118B6A /* LayoutControlCell.m */; };
 		6E6720C521CA4EFC003B5CED /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6720C421CA4EFB003B5CED /* UIView+Extension.m */; };
 		6EC2C5871E7F97B5005E6392 /* PickSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2C5861E7F97B5005E6392 /* PickSliderView.m */; };
 		6ED3CB541DFA5D9E00CD2BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3CB531DFA5D9E00CD2BA4 /* main.m */; };
@@ -19,9 +24,20 @@
 		6EF3E88D2133B675003B23AC /* IMG_0003.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E8892133B674003B23AC /* IMG_0003.JPG */; };
 		6EF3E88E2133B675003B23AC /* IMG_0001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E88A2133B675003B23AC /* IMG_0001.JPG */; };
 		6EF3E88F2133B675003B23AC /* IMG_0002.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6EF3E88B2133B675003B23AC /* IMG_0002.JPG */; };
+		6EF96736279FA02E0095A547 /* QRuleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF96734279FA02E0095A547 /* QRuleSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E239EEA25838EA200118B6A /* UIShadow+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIShadow+UIView.m"; sourceTree = "<group>"; };
+		6E239EEB25838EA200118B6A /* XCWaterCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCWaterCollectionViewLayout.m; sourceTree = "<group>"; };
+		6E239EEC25838EA200118B6A /* XCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCollectionViewLayout.h; sourceTree = "<group>"; };
+		6E239EED25838EA200118B6A /* UIShadow+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIShadow+UIView.h"; sourceTree = "<group>"; };
+		6E239EEE25838EA200118B6A /* XCWaterCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCWaterCollectionViewLayout.h; sourceTree = "<group>"; };
+		6E239EEF25838EA200118B6A /* XCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCollectionViewLayout.m; sourceTree = "<group>"; };
+		6E239F002583906D00118B6A /* LayoutControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutControlCell.h; sourceTree = "<group>"; };
+		6E239F012583906D00118B6A /* LayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutController.m; sourceTree = "<group>"; };
+		6E239F032583906D00118B6A /* LayoutControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutControlCell.m; sourceTree = "<group>"; };
+		6E239F042583906D00118B6A /* LayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutController.h; sourceTree = "<group>"; };
 		6E6720C321CA4EFB003B5CED /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		6E6720C421CA4EFB003B5CED /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		6EC2C5851E7F97B5005E6392 /* PickSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickSliderView.h; sourceTree = "<group>"; };
@@ -41,6 +57,8 @@
 		6EF3E8892133B674003B23AC /* IMG_0003.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0003.JPG; sourceTree = "<group>"; };
 		6EF3E88A2133B675003B23AC /* IMG_0001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0001.JPG; sourceTree = "<group>"; };
 		6EF3E88B2133B675003B23AC /* IMG_0002.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0002.JPG; sourceTree = "<group>"; };
+		6EF96734279FA02E0095A547 /* QRuleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRuleSlider.m; sourceTree = "<group>"; };
+		6EF96735279FA02E0095A547 /* QRuleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRuleSlider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E239EE925838EA200118B6A /* XCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6E239EED25838EA200118B6A /* UIShadow+UIView.h */,
+				6E239EEA25838EA200118B6A /* UIShadow+UIView.m */,
+				6E239EEC25838EA200118B6A /* XCollectionViewLayout.h */,
+				6E239EEF25838EA200118B6A /* XCollectionViewLayout.m */,
+				6E239EEE25838EA200118B6A /* XCWaterCollectionViewLayout.h */,
+				6E239EEB25838EA200118B6A /* XCWaterCollectionViewLayout.m */,
+			);
+			path = XCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		6E239EFF2583906D00118B6A /* FlowLayoutTest */ = {
+			isa = PBXGroup;
+			children = (
+				6E239F002583906D00118B6A /* LayoutControlCell.h */,
+				6E239F032583906D00118B6A /* LayoutControlCell.m */,
+				6E239F042583906D00118B6A /* LayoutController.h */,
+				6E239F012583906D00118B6A /* LayoutController.m */,
+			);
+			path = FlowLayoutTest;
+			sourceTree = "<group>";
+		};
 		6ED3CB461DFA5D9E00CD2BA4 = {
 			isa = PBXGroup;
 			children = (
@@ -73,13 +115,11 @@
 		6ED3CB511DFA5D9E00CD2BA4 /* PickSlider */ = {
 			isa = PBXGroup;
 			children = (
-				6EF3E8852133B558003B23AC /* UIImage+Extension.h */,
-				6EF3E8862133B558003B23AC /* UIImage+Extension.m */,
-				6E6720C321CA4EFB003B5CED /* UIView+Extension.h */,
-				6E6720C421CA4EFB003B5CED /* UIView+Extension.m */,
+				6EF96733279FA0110095A547 /* Slider */,
+				6EF96732279F9FF80095A547 /* Extension */,
+				6E239EE925838EA200118B6A /* XCollectionViewLayout */,
+				6E239EFF2583906D00118B6A /* FlowLayoutTest */,
 				6EF3E8902133B679003B23AC /* image */,
-				6EC2C5851E7F97B5005E6392 /* PickSliderView.h */,
-				6EC2C5861E7F97B5005E6392 /* PickSliderView.m */,
 				6ED3CB551DFA5D9E00CD2BA4 /* AppDelegate.h */,
 				6ED3CB561DFA5D9E00CD2BA4 /* AppDelegate.m */,
 				6ED3CB581DFA5D9E00CD2BA4 /* ViewController.h */,
@@ -109,6 +149,28 @@
 				6EF3E8882133B674003B23AC /* IMG_0004.JPG */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		6EF96732279F9FF80095A547 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6EF3E8852133B558003B23AC /* UIImage+Extension.h */,
+				6EF3E8862133B558003B23AC /* UIImage+Extension.m */,
+				6E6720C321CA4EFB003B5CED /* UIView+Extension.h */,
+				6E6720C421CA4EFB003B5CED /* UIView+Extension.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6EF96733279FA0110095A547 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				6EF96735279FA02E0095A547 /* QRuleSlider.h */,
+				6EF96734279FA02E0095A547 /* QRuleSlider.m */,
+				6EC2C5851E7F97B5005E6392 /* PickSliderView.h */,
+				6EC2C5861E7F97B5005E6392 /* PickSliderView.m */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +214,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -186,12 +249,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E239EF625838EA300118B6A /* UIShadow+UIView.m in Sources */,
 				6E6720C521CA4EFC003B5CED /* UIView+Extension.m in Sources */,
 				6EF3E8872133B558003B23AC /* UIImage+Extension.m in Sources */,
+				6E239EF725838EA300118B6A /* XCWaterCollectionViewLayout.m in Sources */,
+				6EF96736279FA02E0095A547 /* QRuleSlider.m in Sources */,
 				6EC2C5871E7F97B5005E6392 /* PickSliderView.m in Sources */,
 				6ED3CB5A1DFA5D9E00CD2BA4 /* ViewController.m in Sources */,
+				6E239F072583906D00118B6A /* LayoutControlCell.m in Sources */,
 				6ED3CB571DFA5D9E00CD2BA4 /* AppDelegate.m in Sources */,
 				6ED3CB541DFA5D9E00CD2BA4 /* main.m in Sources */,
+				6E239EF825838EA300118B6A /* XCollectionViewLayout.m in Sources */,
+				6E239F052583906D00118B6A /* LayoutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

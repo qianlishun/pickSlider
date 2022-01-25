@@ -184,4 +184,23 @@
     //设置边框的粗细
     [self.layer setBorderWidth:1.0];
 }
+
+- (CATextLayer*)createTextLayerWithString:(NSString*)string Frame:(CGRect)frame font:(UIFont*)font color:(UIColor*)color{
+    CATextLayer *textLayer = [CATextLayer layer];
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.lineSpacing = 1;
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSForegroundColorAttributeName:color,NSParagraphStyleAttributeName:paragraph}];
+    [attributedStr addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, string.length)];
+    textLayer.string = attributedStr;
+    textLayer.bounds = [attributedStr boundingRectWithSize:CGSizeMake(frame.size.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    [textLayer setPosition:CGPointMake(frame.origin.x + textLayer.bounds.size.width/2+2,  frame.origin.y)];
+    textLayer.alignmentMode = kCAAlignmentCenter;
+    textLayer.backgroundColor = [UIColor clearColor].CGColor;
+    textLayer.contentsScale = [UIScreen mainScreen].scale;
+    return textLayer;
+}
+
+- (CATextLayer*)createTextLayerWithString:(NSString*)string Frame:(CGRect)frame fontsize:(float)fontsize{
+    return [self createTextLayerWithString:string Frame:frame font:[UIFont systemFontOfSize:fontsize] color:[UIColor lightGrayColor]];
+}
 @end
